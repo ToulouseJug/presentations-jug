@@ -41,7 +41,7 @@
 		<div class="reveal">			
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section data-background="images/capitole.png" class="first">
+				<section data-background="images/capitole.png" data-transition="fade" class="first">
 					<img src="images/toulousejug.png" class="toulousejug">
 					<img src="images/juggy.png" class="juggy">
 					<h1>Soirée<br>
@@ -51,67 +51,44 @@
 							<img src="images/objetdirect.png">
 						</div>
 					</footer>
-				</section>
-
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+						Titre de la soirée à mettre à jour.
 					</aside>
 				</section>
 
-				<!-- Example of nested vertical slides -->
 				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
+					<h2>Au programme ce soir</h2>
+					<ul>
+						<li>Les nouvelles neuves de tête de ligne</li>
+						<li>Quizz</li>
+						<li><b>La présentation du soir</b></li>
+						<li>Des bières et des pizzas histoire de discuter de tout ça</li>
+					</ul>
+
+					<aside class="notes">
+						Il faut penser à remettre ici le nom de la présenation du soir.
+					</aside>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
+					<h1>Les news</h1>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+					<h2>Docker en version finale</h2>
+					<ul>
+						<li>Sortie de la version 1.0</li>
+						<li>Docker Con</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Et toujours...</h2>
+					<ul>
+						<li>Le nouveau site éditable par tous sous Github</li>
+						<li>Les slides idem, une branche par soirée, à vos Pull Requests</li>
+						<li>Adhésion en ligne pour ceux qui auraient oublié</li>
+					</ul>
 				</section>
 
 				<section>
@@ -377,7 +354,7 @@ function linkify( selector ) {
 				margin: 0,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
