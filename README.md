@@ -1,3 +1,20 @@
+# Presentations Toulouse JUG
+
+## Workflow
+
+Il suffit de créer une nouvelle branche depuis master pour chaque nouvelle soirée.
+
+En cas de modifications globale (ajout d'un sponsor par exemple), merci de le rajouter directement au master et de potentiellement merger le commit en question dans les branches des présentations en cours.
+
+Je laisse le Readme original ci-dessous afin d'avoir accès aux informations principales concernant le lancement des présentations en mode speaker notamment.
+
+
+
+
+
+
+
+
 # reveal.js [![Build Status](https://travis-ci.org/hakimel/reveal.js.png?branch=master)](https://travis-ci.org/hakimel/reveal.js)
 
 A framework for easily creating beautiful presentations using HTML. [Check out the live demo](http://lab.hakim.se/reveal-js/).
