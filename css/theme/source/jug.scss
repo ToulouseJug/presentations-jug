@@ -1,0 +1,92 @@
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=News+Cycle:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: 'Lato', sans-serif;
+$mainColor: #000;
+$headingFont: 'News Cycle', Impact, sans-serif;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #ddd;
+$linkColor: #00008B;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// some overrides after theme template import
+
+.reveal .slides>section.first {
+	padding: 0;
+}
+
+section.first {
+	height: 100%;
+	width: 100%;
+}
+
+section.first img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: none;
+	box-shadow: none
+}
+
+section.first img.toulousejug {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 10%;
+	margin-left: 5px
+}
+
+section.first img.juggy {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 75%;
+	margin-left: 5px
+}
+
+section.first h1 {
+	position: absolute;
+	top: 25%;
+	left: 0;
+	margin-left: 20px;
+	text-align: left;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.55)
+}
+
+section.first footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 25%;
+	background-color: $backgroundColor
+}
+
+section.first footer div {
+	height: 100%;
+	margin: auto;
+}
+
+section.first footer img {
+	margin: 5px;
+	height: 100%
+}
