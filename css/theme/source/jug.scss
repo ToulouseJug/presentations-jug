@@ -28,16 +28,16 @@ $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 // some overrides after theme template import
 
-.reveal .slides>section.first {
+.reveal .slides>section.intro, .reveal .slides>section.outro {
 	padding: 0;
 }
 
-section.first {
+section.intro, section.outro {
 	height: 100%;
 	width: 100%;
 }
 
-section.first img {
+section.intro img, section.outro img {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -45,7 +45,7 @@ section.first img {
 	box-shadow: none
 }
 
-section.first img.toulousejug {
+section.intro img.toulousejug, section.outro img.toulousejug {
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -53,7 +53,7 @@ section.first img.toulousejug {
 	margin-left: 5px
 }
 
-section.first img.juggy {
+section.intro img.juggy, section.outro img.juggy {
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -61,7 +61,7 @@ section.first img.juggy {
 	margin-left: 5px
 }
 
-section.first h1 {
+section.intro h1, section.outro h1 {
 	position: absolute;
 	top: 25%;
 	left: 0;
@@ -73,7 +73,7 @@ section.first h1 {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.55)
 }
 
-section.first footer {
+section.intro footer, section.outro footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -81,12 +81,20 @@ section.first footer {
 	background-color: $backgroundColor
 }
 
-section.first footer div {
+section.intro footer div, section.outro footer div {
 	height: 100%;
 	margin: auto;
 }
 
-section.first footer img {
+section.intro footer img, section.outro footer img {
 	margin: 5px;
 	height: 100%
+}
+
+.false {
+	background-color: #ff7171
+}
+
+.true {
+	background-color: #a5ffa1
 }
