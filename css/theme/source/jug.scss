@@ -21,6 +21,11 @@ $linkColorHover: lighten( $linkColor, 20% );
 $selectionBackgroundColor: rgba(0, 0, 0, 0.99);
 
 
+// Background generator
+@mixin bodyBackground() {
+	@include radial-gradient( #add9e4, #f7fbfc );
+}
+
 
 // Theme template ------------------------------
 @import "../template/theme";
@@ -97,4 +102,20 @@ section.intro footer img, section.outro footer img {
 
 .true {
 	background-color: #a5ffa1
+}
+
+section.leftwithbg {
+	height: 100%
+}
+
+section.leftwithbg div {
+	position: absolute;
+	top: 40%;
+	left: 0;
+	margin-left: 20px;
+	text-align: left;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.55)	
 }

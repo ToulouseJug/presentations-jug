@@ -4,7 +4,13 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #dddddd;
+  background: #add9e4;
+  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
+  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
   background-color: #dddddd; }
 
 .reveal {
@@ -189,3 +195,17 @@ section.intro footer img, section.outro footer img {
 
 .true {
   background-color: #a5ffa1; }
+
+section.leftwithbg {
+  height: 100%; }
+
+section.leftwithbg div {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  margin-left: 20px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
