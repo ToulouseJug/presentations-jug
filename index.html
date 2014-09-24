@@ -129,35 +129,117 @@
 				</section>
 
 				<section data-transition="none">
-					<h2>Ton égal en string</h2>
+					<h2>Java puzzlers</h2>
 					<pre><code data-trim class="java">
-String string = "string";
-
-boolean equals = string + "" == string;
-
-System.out.println("fini: " + equals);
+public class LinePrinter {
+  public static void main(String[] args) {
+    // Note: \u000A is Unicode representation of linefeed (LF)
+    char c = 0x000A;
+    System.out.println(c);
+  } 
+}
 					</code></pre>
-					<ol>
-						<li>fini: True</li>
-						<li>fini: False</li>
-						<li>Autre</li>
-					</ol>
+
+Qu’affiche ce programme ?
+				</section>
+				
+				<section data-transition="none">
+					<h2>Java puzzlers</h2>
+					<pre><code data-trim class="java">
+public class LinePrinter {
+  public static void main(String[] args) {
+    // Note: \u000A is Unicode representation of linefeed (LF)
+    char c = 0x000A;
+    System.out.println(c);
+  } 
+}
+
+LinePrinter.java:3: ’;’ expected
+ // Note: \u000A is Unicode representation of linefeed (LF)
+                ^
+1 error
+					</code></pre>
 				</section>
 
 				<section data-transition="none">
-					<h2>Ton égal en string</h2>
+					<h2>Fondamentaux</h2>
+Quelle est la plage numérique du type char ?<br>
+<ul>
+	<li>A. -128 à 127</li>
+	<li>B. -215 à 215 - 1</li>
+	<li>C. 0 à 32767</li>
+	<li>D. 0 à 65535</li>
+</ul>
+				</section>
+				<section data-transition="none">
+					<h2>Fondamentaux</h2>
+Quelle est la plage numérique du type char ?<br>
+<ul>
+	<li class="false">A. -128 à 127</li>
+	<li class="false">B. -215 à 215 - 1</li>
+	<li class="false">C. 0 à 32767</li>
+	<li class="true">D. 0 à 65535</li>
+</ul>
+				</section>
+
+				<section data-transition="none">
+					<h2>Pattern</h2>
+					Quel pattern ?
 					<pre><code data-trim class="java">
-String string = "string";
+public abstract class AbstractRegister {
+    private Connection getDatabase(){/* Return connection */}
 
-boolean equals = string + "" == string;
+    //Different for User, Admin, SuperBoss
+    public abstract String getTable();
 
-System.out.println("fini: " + equals);
+    private String writeQuery(){
+        return "INSERT INTO "+getTable()+ " BLABLABLA;";
+    }
+
+    private void tweetThatStuff(){/* tweet stuff*/}
+
+    public void execute(){
+        getDatabase().write(writeQuery());
+        tweetThatStuff();
+    }
+}
 					</code></pre>
-					<ol>
-						<li class="false">fini: True</li>
-						<li class="true">fini: False</li>
-						<li class="false">Autre</li>
-					</ol>
+<ul>
+	<li>A. Visitor</li>
+	<li>B. Template Method</li>
+	<li>C. Interpreter</li>
+	<li>D. Decorator</li>
+</ul>
+				</section>
+				
+				<section data-transition="none">
+					<h2>Pattern</h2>
+					Quel pattern ?
+					<pre><code data-trim class="java">
+public abstract class AbstractRegister {
+    private Connection getDatabase(){/* Return connection */}
+
+    //Different for User, Admin, SuperBoss
+    public abstract String getTable();
+
+    private String writeQuery(){
+        return "INSERT INTO "+getTable()+ " BLABLABLA;";
+    }
+
+    private void tweetThatStuff(){/* tweet stuff*/}
+
+    public void execute(){
+        getDatabase().write(writeQuery());
+        tweetThatStuff();
+    }
+}
+					</code></pre>
+<ul>
+	<li class="false">A. Visitor</li>
+	<li class="true">B. Template Method</li>
+	<li class="false">C. Interpreter</li>
+	<li class="false">D. Decorator</li>
+</ul>
 				</section>
 
 				<section data-background="images/capitole.png" data-transition="fade" class="outro">
