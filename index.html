@@ -126,35 +126,119 @@
 				</section>
 
 				<section data-transition="none">
-					<h2>Ton égal en string</h2>
+					<h2>Ordures !</h2>
 					<pre><code data-trim class="java">
-String string = "string";
+class Bar { } 
+class Test 
+{  
+    Bar doBar() 
+    {
+        Bar b = new Bar(); /* Line 6 */
+        return b; /* Line 7 */
+    } 
+    public static void main (String args[]) 
+    { 
+        Test t = new Test();  /* Line 11 */
+        Bar newBar = t.doBar();  /* Line 12 */
+        System.out.println("newBar"); 
+        newBar = new Bar(); /* Line 14 */
+        System.out.println("finishing"); /* Line 15 */
+    } 
+}
 
-boolean equals = string + "" == string;
-
-System.out.println("fini: " + equals);
 					</code></pre>
-					<ol>
-						<li>fini: True</li>
-						<li>fini: False</li>
-						<li>Autre</li>
-					</ol>
+A quel moment l'objet Bar créé à la ligne 6 devient éligible pour le GC ?<br/>
+<ol>
+	<li>après la ligne 12</li>
+	<li>après la ligne 14</li>
+	<li>après la ligne 7, quand doBar() finit</li>
+	<li>après la ligne 15, quand main() finit</li>
+<ol>
 				</section>
 
 				<section data-transition="none">
-					<h2>Ton égal en string</h2>
+					<h2>Ordures !</h2>
 					<pre><code data-trim class="java">
-String string = "string";
+class Bar { } 
+class Test 
+{  
+    Bar doBar() 
+    {
+        Bar b = new Bar(); /* Line 6 */
+        return b; /* Line 7 */
+    } 
+    public static void main (String args[]) 
+    { 
+        Test t = new Test();  /* Line 11 */
+        Bar newBar = t.doBar();  /* Line 12 */
+        System.out.println("newBar"); 
+        newBar = new Bar(); /* Line 14 */
+        System.out.println("finishing"); /* Line 15 */
+    } 
+}
 
-boolean equals = string + "" == string;
-
-System.out.println("fini: " + equals);
 					</code></pre>
-					<ol>
-						<li class="false">fini: True</li>
-						<li class="true">fini: False</li>
-						<li class="false">Autre</li>
-					</ol>
+A quel moment l'objet Bar créé à la ligne 6 devient éligible pour le GC ?<br/>
+<ol>
+	<li class="false">après la ligne 12</li>
+	<li class="true">après la ligne 14</li>
+	<li class="false">après la ligne 7, quand doBar() finit</li>
+	<li class="false">après la ligne 15, quand main() finit</li>
+<ol>
+				</section>
+
+				<section data-transition="none">
+					<h2>En fin de compte...</h2>
+					<pre><code data-trim class="java">
+public class Foo 
+{  
+    public static void main(String[] args) 
+    {
+        try 
+        { 
+            System.exit(-1); 
+        } 
+        finally 
+        {
+            System.out.println( "Finally" ); 
+        } 
+    } 
+}
+					</code></pre>
+Qu'affiche ce code ?<br/>
+<ol>
+	<li>Finally	</li>
+	<li>Erreur de compilation</li>
+	<li>Ce code n’affiche rien.</li>
+	<li>Une exception est lancé au runtime.</li>
+<ol>
+				</section>
+
+				<section data-transition="none">
+					<h2>En fin de compte...</h2>
+					<pre><code data-trim class="java">
+public class Foo 
+{  
+    public static void main(String[] args) 
+    {
+        try 
+        { 
+            System.exit(-1); 
+        } 
+        finally 
+        {
+            System.out.println( "Finally" ); 
+        } 
+    } 
+}
+					</code></pre>
+Qu'affiche ce code ?<br/>
+<ol>
+	<li class="false">Finally	</li>
+	<li class="false">Erreur de compilation</li>
+	<li class="true">Ce code n’affiche rien.</li>
+	<li class="false">Une exception est lancé au runtime.</li>
+<ol>
 				</section>
 
 				<section data-background="images/capitole.png" data-transition="fade" class="outro">
